@@ -4,7 +4,7 @@ class Application
     current_time = Time.now.to_i
   midnight = Time.now.beginning_of_day.to_i
   noon = Time.now.middle_of_day.to_i
-   if time.parse < 1200
+   if midnight.upto(noon).inclu
      resp.write "Good Morning"
    else
      resp.write "Good Afternoon"
